@@ -1,0 +1,203 @@
+/* Primero quito los espacios que vienen por defecto y establezco el tipo de letra que voy a utilizar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Aquí elijo el color de fondo de toda mi página y el color del texto */
+body {
+    background-color: #f8f4ff;
+    color: #333;
+}
+
+/* En esta parte doy estilo al encabezado de mi página */
+header {
+    background-color: #ffffff;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Aquí personalizo el nombre de mi empresa con color, tamaño y letra en negrita */
+.logo {
+    color: #8054c7;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Doy estilo a los enlaces de mi menú para que tengan un aspecto ordenado */
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+/* Cambio el color de los enlaces cuando paso el cursor sobre ellos */
+nav a:hover {
+    color: #a35bd6;
+}
+
+/* Aquí comienzo a darle diseño a la sección principal de mi página */
+.principal {
+    min-height: 500px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(135deg, #eee3ff, #ffe5f3);
+}
+
+/* Establezco el ancho máximo del espacio donde coloco mi texto */
+.contenido {
+    max-width: 550px;
+}
+
+/* Aquí doy tamaño, color y espacio al título principal */
+.contenido h1 {
+    font-size: 45px;
+    color: #603b9c;
+    margin-bottom: 20px;
+}
+
+/* Personalizo el párrafo para que sea más fácil de leer */
+.contenido p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* En esta parte diseño el botón que utilizo para mostrar los servicios */
+.boton {
+    display: inline-block;
+    background-color: #925bd0;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Agrego un efecto al botón para que cambie de color y aumente un poco al pasar el cursor */
+.boton:hover {
+    background-color: #7041aa;
+    transform: scale(1.05);
+}
+
+/* Aquí doy forma y tamaño al emoji de computadora que utilizo como imagen decorativa */
+.imagen {
+    font-size: 150px;
+    background-color: white;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(100, 50, 150, 0.15);
+}
+
+/* Aquí personalizo la sección donde presento información sobre mi empresa */
+.servicios {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+/* Doy color y tamaño al título de esta sección */
+.servicios h2 {
+    color: #603b9c;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Ajusto el párrafo para que quede centrado y tenga un espacio adecuado */
+.servicios > p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.7;
+    color: #666;
+    font-size: 17px;
+}
+
+/* Organizo mis tarjetas para que aparezcan ordenadas y con separación entre ellas */
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* Aquí doy diseño a cada tarjeta, colocando fondo blanco, espacio y bordes redondeados */
+.tarjeta {
+    background-color: white;
+    padding: 30px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* Personalizo los títulos de cada tarjeta con el color de mi diseño */
+.tarjeta h3 {
+    color: #8054c7;
+    margin: 15px 0;
+}
+
+/* Ajusto el tamaño del texto que aparece dentro de mis tarjetas */
+.tarjeta p {
+    font-size: 15px;
+}
+
+/* Aumento el tamaño de los emojis que utilizo para representar cada servicio */
+.icono {
+    font-size: 40px;
+}
+
+/* En esta parte diseño el pie de página donde coloco la información final de mi empresa */
+footer {
+    background-color: #603b9c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+/* Utilizo esta regla para adaptar mi página cuando se abre desde una pantalla pequeña */
+@media (max-width: 768px) {
+
+    /* Coloco los elementos del encabezado uno debajo del otro */
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Ajusto la separación de los enlaces del menú para que se vean mejor en celulares */
+    nav a {
+        margin: 0 8px;
+    }
+
+    /* Organizo el texto y la imagen en forma vertical y centro el contenido */
+    .principal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Reduzco el tamaño del título para que se adapte a la pantalla */
+    .contenido h1 {
+        font-size: 34px;
+    }
+
+    /* Reduzco el tamaño de la imagen decorativa para que no ocupe demasiado espacio */
+    .imagen {
+        width: 200px;
+        height: 200px;
+        font-size: 100px;
+    }
+}
